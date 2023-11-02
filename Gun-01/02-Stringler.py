@@ -18,3 +18,6 @@ print(len(metin))#len methodu uzunluğu verir
 sonEleman = len(metin)-1
 print(sonEleman)
 print(metin[-1])
+
+
+print(metin[::-1])#reverse method
