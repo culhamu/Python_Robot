@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231109 20:46:56.736" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231114 10:27:06.991" rpa="false" schemaversion="4">
 <suite id="s1" name="03-If Else" source="D:\Robot\Robot Framework\RobotFramework\03-If_Else.robot">
-<test id="s1-t1" name="Test 01" line="13">
+<test id="s1-t1" name="Test 01" line="12">
 <if>
 <branch type="IF" condition="${sayi2} &gt; ${sayi1}">
 <kw name="Log To Console" library="BuiltIn">
-<arg>sayi2 sayi1 den büyük</arg>
+<arg>${sayi2}, ${sayi1}'den buyuktur</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231109 20:46:56.755" endtime="20231109 20:46:56.757"/>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
 </kw>
-<status status="PASS" starttime="20231109 20:46:56.755" endtime="20231109 20:46:56.757"/>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" library="BuiltIn">
-<arg>sayi1 sayi2 den büyük</arg>
+<arg>${sayi1}, ${sayi2}'den buyuktur</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231109 20:46:56.757" endtime="20231109 20:46:56.757"/>
+<status status="NOT RUN" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
 </kw>
-<status status="NOT RUN" starttime="20231109 20:46:56.757" endtime="20231109 20:46:56.757"/>
+<status status="NOT RUN" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
 </branch>
-<status status="PASS" starttime="20231109 20:46:56.755" endtime="20231109 20:46:56.757"/>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
 </if>
-<status status="PASS" starttime="20231109 20:46:56.754" endtime="20231109 20:46:56.758"/>
+<if>
+<branch type="IF" condition="&quot;Bu&quot; in &quot;${cumle}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Bu" kelimesi mevcut</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
+</kw>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
+</branch>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
+</if>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ornek}</var>
+<arg>ORNEK</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231114 10:27:07.028" level="INFO">${ornek} = ORNEK</msg>
+<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;ORNEK&quot; == &quot;${ornek}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>ESITTIR</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
+</kw>
+<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>ESIT DEGILDIR</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
+</kw>
+<status status="NOT RUN" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
+</branch>
+<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
+</if>
+<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
 </test>
-<status status="PASS" starttime="20231109 20:46:56.736" endtime="20231109 20:46:56.760"/>
+<status status="PASS" starttime="20231114 10:27:06.991" endtime="20231114 10:27:07.028"/>
 </suite>
 <statistics>
 <total>
