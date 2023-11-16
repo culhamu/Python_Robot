@@ -1,66 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231114 10:27:06.991" rpa="false" schemaversion="4">
-<suite id="s1" name="03-If Else" source="D:\Robot\Robot Framework\RobotFramework\03-If_Else.robot">
-<test id="s1-t1" name="Test 01" line="12">
-<if>
-<branch type="IF" condition="${sayi2} &gt; ${sayi1}">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231116 20:45:26.167" rpa="false" schemaversion="4">
+<suite id="s1" name="10-CustomLibKullanma" source="D:\Robot\Robot Framework\RobotFramework\10-CustomLibKullanma.robot">
+<test id="s1-t1" name="Test 01" line="10">
+<kw name="Sayilari Topla" library="10-CustomLib">
+<var>${sailarinToplami}</var>
+<arg>40</arg>
+<arg>50</arg>
+<msg timestamp="20231116 20:45:26.202" level="INFO">${sailarinToplami} = 90</msg>
+<status status="PASS" starttime="20231116 20:45:26.202" endtime="20231116 20:45:26.202"/>
+</kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${sayi2}, ${sayi1}'den buyuktur</arg>
+<arg>${sailarinToplami}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
+<status status="PASS" starttime="20231116 20:45:26.203" endtime="20231116 20:45:26.204"/>
 </kw>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log To Console" library="BuiltIn">
-<arg>${sayi1}, ${sayi2}'den buyuktur</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
+<kw name="Mustafa'nin keywordu" library="10-CustomLib">
+<arg>15</arg>
+<arg>25</arg>
+<status status="PASS" starttime="20231116 20:45:26.205" endtime="20231116 20:45:26.205"/>
 </kw>
-<status status="NOT RUN" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
-</branch>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.022"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;Bu&quot; in &quot;${cumle}&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>"Bu" kelimesi mevcut</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
-</kw>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
-</branch>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
-</if>
-<kw name="Set Variable" library="BuiltIn">
-<var>${ornek}</var>
-<arg>ORNEK</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231114 10:27:07.028" level="INFO">${ornek} = ORNEK</msg>
-<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;ORNEK&quot; == &quot;${ornek}&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>ESITTIR</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
-</kw>
-<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log To Console" library="BuiltIn">
-<arg>ESIT DEGILDIR</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
-</kw>
-<status status="NOT RUN" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
-</branch>
-<status status="PASS" starttime="20231114 10:27:07.028" endtime="20231114 10:27:07.028"/>
-</if>
-<status status="PASS" starttime="20231114 10:27:07.022" endtime="20231114 10:27:07.028"/>
+<status status="PASS" starttime="20231116 20:45:26.201" endtime="20231116 20:45:26.206"/>
 </test>
-<status status="PASS" starttime="20231114 10:27:06.991" endtime="20231114 10:27:07.028"/>
+<status status="PASS" starttime="20231116 20:45:26.169" endtime="20231116 20:45:26.208"/>
 </suite>
 <statistics>
 <total>
@@ -69,7 +30,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="03-If Else">03-If Else</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="10-CustomLibKullanma">10-CustomLibKullanma</stat>
 </suite>
 </statistics>
 <errors>
