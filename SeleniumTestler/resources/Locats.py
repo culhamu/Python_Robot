@@ -1,0 +1,2 @@
+
+REGISTER="//a[contains(.,'Register')]"

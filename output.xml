@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231116 20:45:26.167" rpa="false" schemaversion="4">
-<suite id="s1" name="10-CustomLibKullanma" source="D:\Robot\Robot Framework\RobotFramework\10-CustomLibKullanma.robot">
-<test id="s1-t1" name="Test 01" line="10">
-<kw name="Sayilari Topla" library="10-CustomLib">
-<var>${sailarinToplami}</var>
-<arg>40</arg>
-<arg>50</arg>
-<msg timestamp="20231116 20:45:26.202" level="INFO">${sailarinToplami} = 90</msg>
-<status status="PASS" starttime="20231116 20:45:26.202" endtime="20231116 20:45:26.202"/>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231120 20:23:39.358" rpa="false" schemaversion="4">
+<suite id="s1" name="Test01" source="D:\Robot\Robot Framework\SeleniumTestler\tests\test01.robot">
+<test id="s1-t1" name="Test001" line="7">
+<kw name="Anasayfaya chrome ile git" library="keywords" sourcename="Anasayfaya ${BROWSER} ile git">
+<if>
+<branch type="IF" condition="&quot;${BROWSER}&quot; == &quot;&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${BROWSER}</var>
+<arg>chrome</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231120 20:23:39.604" endtime="20231120 20:23:39.604"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${sailarinToplami}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231116 20:45:26.203" endtime="20231116 20:45:26.204"/>
+<status status="NOT RUN" starttime="20231120 20:23:39.604" endtime="20231120 20:23:39.604"/>
+</branch>
+<status status="PASS" starttime="20231120 20:23:39.604" endtime="20231120 20:23:39.604"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demowebshop.tricentis.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 20:23:39.605" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com'.</msg>
+<status status="PASS" starttime="20231120 20:23:39.605" endtime="20231120 20:23:52.463"/>
 </kw>
-<kw name="Mustafa'nin keywordu" library="10-CustomLib">
-<arg>15</arg>
-<arg>25</arg>
-<status status="PASS" starttime="20231116 20:45:26.205" endtime="20231116 20:45:26.205"/>
+<status status="PASS" starttime="20231120 20:23:39.604" endtime="20231120 20:23:52.463"/>
 </kw>
-<status status="PASS" starttime="20231116 20:45:26.201" endtime="20231116 20:45:26.206"/>
+<kw name="Anasayfaya git" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demowebshop.tricentis.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 20:23:52.466" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com'.</msg>
+<status status="PASS" starttime="20231120 20:23:52.465" endtime="20231120 20:23:54.723"/>
+</kw>
+<status status="PASS" starttime="20231120 20:23:52.464" endtime="20231120 20:23:54.725"/>
+</kw>
+<status status="PASS" starttime="20231120 20:23:39.602" endtime="20231120 20:23:54.725"/>
 </test>
-<status status="PASS" starttime="20231116 20:45:26.169" endtime="20231116 20:45:26.208"/>
+<status status="PASS" starttime="20231120 20:23:39.360" endtime="20231120 20:23:54.729"/>
 </suite>
 <statistics>
 <total>
@@ -30,7 +45,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="10-CustomLibKullanma">10-CustomLibKullanma</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test01">Test01</stat>
 </suite>
 </statistics>
 <errors>

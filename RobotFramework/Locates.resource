@@ -1,0 +1,2 @@
+*** Variables ***
+${uyeliBtn}    xpath    uyelik
