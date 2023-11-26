@@ -2,8 +2,7 @@
 Library         SeleniumLibrary
 Library         Collections
 Library         FakerLibrary
-Variables       Locats.py
-Resource        D:\Robot\Robot Framework\RobotFramework\07-Keywords.robot
+Variables       Locators.py
 
 
 *** Keywords ***
